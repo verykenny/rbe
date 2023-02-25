@@ -10,14 +10,16 @@ import { Routes, Route } from 'react-router-dom'
 function App() {
   return (
     <AppContainer className="App">
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/faq" element={<Questions />} />
-        <Route path="/articles" element={<Articles />} />
-      </Routes>
+      <div>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/faq" element={<Questions />} />
+          <Route path="/articles" element={<Articles />} />
+        </Routes>
+      </div>
       <Footer />
     </AppContainer>
   );
@@ -27,6 +29,9 @@ export default App;
 
 const AppContainer = styled.div`
   min-height: 100vh;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
+  position: relative;
 `;

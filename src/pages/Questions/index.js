@@ -16,23 +16,23 @@ const FaqPage = () => {
       <FaqItem>
         <FaqQuestion>How does a Resource-Based Economy work?</FaqQuestion>
         <FaqAnswer>A resource-based economy is based on the intelligent management of resources and the use of advanced technologies to create a world without money, where goods and services are produced and distributed according to the needs of all people, not just a privileged few. The following are some of the key principles of a resource-based economy:
-          <ol>
-            <li>Resource Management: Resources are managed as a common heritage of all people, not as the private property of a few individuals or corporations. Advanced technologies are used to monitor and manage the use of resources, to ensure that they are used in a sustainable and efficient way.</li>
-            <li>Advanced Technologies: Advanced technologies are used to automate production and distribution, to reduce the need for human labor, and to increase efficiency and productivity.</li>
-            <li>Access instead of Ownership: Instead of owning goods and services, people have access to them when they need them, through a system of shared ownership and access.</li>
-            <li>Sustainable and Equitable: The goal of a resource-based economy is to create a world that is sustainable, equitable, and efficient, where all people have access to the goods and services they need to live a healthy and fulfilling life.</li>
-          </ol>
+          <FaqList>
+            <FaqListItem>Resource Management: Resources are managed as a common heritage of all people, not as the private property of a few individuals or corporations. Advanced technologies are used to monitor and manage the use of resources, to ensure that they are used in a sustainable and efficient way.</FaqListItem>
+            <FaqListItem>Advanced Technologies: Advanced technologies are used to automate production and distribution, to reduce the need for human labor, and to increase efficiency and productivity.</FaqListItem>
+            <FaqListItem>Access instead of Ownership: Instead of owning goods and services, people have access to them when they need them, through a system of shared ownership and access.</FaqListItem>
+            <FaqListItem>Sustainable and Equitable: The goal of a resource-based economy is to create a world that is sustainable, equitable, and efficient, where all people have access to the goods and services they need to live a healthy and fulfilling life.</FaqListItem>
+          </FaqList>
         </FaqAnswer>
       </FaqItem>
       <FaqItem>
         <FaqQuestion>Benefits of a Resource-Based Economy</FaqQuestion>
         <FaqAnswer>A resource-based economy offers many benefits, including:
-          <ol>
-            <li>Sustainability: A resource-based economy is based on the intelligent management of resources, which helps to ensure that resources are used in a sustainable and efficient way.</li>
-            <li>Equity: A resource-based economy prioritizes the well-being of people and the planet over the interests of profit and power, which helps to reduce inequality and create a more equitable world.</li>
-            <li>Efficiency: Advanced technologies are used to automate production and distribution, which helps to increase efficiency and productivity.</li>
-            <li>Innovation: A resource-based economy encourages innovation and creativity, as people are freed from the constraints of the profit motive and are able to focus on solving real-world problems.</li>
-          </ol>
+          <FaqList>
+            <FaqListItem>Sustainability: A resource-based economy is based on the intelligent management of resources, which helps to ensure that resources are used in a sustainable and efficient way.</FaqListItem>
+            <FaqListItem>Equity: A resource-based economy prioritizes the well-being of people and the planet over the interests of profit and power, which helps to reduce inequality and create a more equitable world.</FaqListItem>
+            <FaqListItem>Efficiency: Advanced technologies are used to automate production and distribution, which helps to increase efficiency and productivity.</FaqListItem>
+            <FaqListItem>Innovation: A resource-based economy encourages innovation and creativity, as people are freed from the constraints of the profit motive and are able to focus on solving real-world problems.</FaqListItem>
+          </FaqList>
         </FaqAnswer>
       </FaqItem>
       <FaqItem>
@@ -69,4 +69,12 @@ const FaqQuestion = styled.h2`
 const FaqAnswer = styled.p`
   font-size: 18px;
   line-height: 1.5;
+`;
+
+const FaqList = styled.ol`
+  margin: 1rem 5rem 1rem;
+`;
+
+const FaqListItem = styled.li`
+  text-align: left;
 `;
