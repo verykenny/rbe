@@ -1,9 +1,11 @@
+import './Home.css'
+
 const Home = () => {
   return (
-    <div>
-      <h1>Welcome to our website!</h1>
-      <p>Thank you for visiting us. We are a team of passionate individuals who strive to provide high-quality products and services to our customers.</p>
-      <p>Please feel free to browse our website and learn more about what we do. If you have any questions or feedback, don't hesitate to contact us.</p>
+    <div className="home">
+      <h1>Sustainable economy for future generations.</h1>
+      <p>BlueEconomy is here to provide information and resources on the opportunities and benefits of a resource-based economy. We believe that by focusing on how we can use resources effectively, we can achieve both environmental sustainability and economic prosperity</p>
+      <p>Our mission is to inspire a shift in the way we view and use resources, towards a more sustainable and equitable future. Our vision is a blue economy — one where our economy is aligned with the natural world and social need. From this perspective, our work highlights the concurrent crisis of overconsumption, resource depletion and social inequality.</p>
     </div>
   );
 }
