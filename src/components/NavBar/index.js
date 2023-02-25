@@ -39,6 +39,8 @@ const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
+  position: sticky;
+  top: 0;
 `;
 
 const Toggle = styled.div`

@@ -14,13 +14,13 @@ export default Footer;
 const FooterContainer = styled.footer`
   background-color: #333;
   color: #fff;
-  padding: 20px;
+  padding: 1rem;
   text-align: center;
-  bottom: 0;
   width: 100%;
   display: flex;
   justify-content: center;
   position: sticky;
+  bottom: 0;
 `;
 
 const Copywrite = styled.p`
