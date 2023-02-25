@@ -76,7 +76,7 @@ const NavItems = styled.ul`
 `;
 
 const NavItem = styled.li`
-  margin-right: 20px;
+  margin: auto 20px auto 0;
 
   &:last-child {
     margin-right: 0;
