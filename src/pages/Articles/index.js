@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 const Articles = () => {
 
   const articles = [
-    { id: '0001', path: '/Articles/0001_understandingthefundamentals.txt', title: 'Understanding the fundamentals of a resource-based economy' },
+    { id: '0001', path: '/Articles/0001', title: 'Understanding the fundamentals of a resource-based economy' },
+    { id: '0002', path: '/Articles/0002', title: 'The history and evolution of resource-based economies' },
+    { id: '0003', path: '/Articles/0003', title: 'Advantages and disadvantages of resource-based economies compared to other economic systems' },
   ];
 
   return (
