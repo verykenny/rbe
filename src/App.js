@@ -3,8 +3,10 @@ import Home from './pages/Home'
 import About from './pages/AboutUs'
 import Questions from './pages/Questions'
 import Articles from './pages/Articles'
+import ArticlePage from './pages/ArticlePage'
 import Nav from './components/NavBar'
 import Footer from './components/Footer'
+
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<Questions />} />
           <Route path="/articles" element={<Articles />} />
+          <Route path="/articles/:id" element={<ArticlePage />} />
         </Routes>
       </div>
       <Footer />

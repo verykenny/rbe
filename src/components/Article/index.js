@@ -1,20 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
-const Article = ({ fileName }) => {
+const Article = ({ articleText }) => {
   const [content, setContent] = useState("");
   const [title, setTitle] = useState("");
 
   useEffect(() => {
-    const getFileContent = async () => {
-      const response = await fetch(fileName);
-      const text = await response.text();
-      const [titleText, contentText] = text.split('\n\n\n', 2);
-      setTitle(titleText);
-      setContent(contentText);
-    };
-    getFileContent();
-  }, [fileName]);
+    const [titleText, _summaryText, contentText] = articleText.split('\n\n\n');
+    setTitle(titleText);
+    setContent(contentText);
+  }, [articleText]);
 
   const renderContent = () => {
     return content.split('\n').map((paragraph, i) => (
@@ -25,7 +20,7 @@ const Article = ({ fileName }) => {
   return (
     <ArticleContainer>
       {title && <ArticleTitle>{title}</ArticleTitle>}
-      <ArticleContent>{renderContent()}</ArticleContent>
+      {content && <ArticleContent>{renderContent()}</ArticleContent>}
     </ArticleContainer>
   );
 }
