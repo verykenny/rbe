@@ -28,13 +28,13 @@ export default Articles;
 
 const ArticlesListContainer = styled.div`
   margin: 0 auto;
-  width: 90%;
+  max-width: 800px;
+  padding: 2rem;
 `;
 
 const ArticleList = styled.ul`
   list-style: none;
   margin: 0 auto;
-  width: 50%;
 `;
 
 const ArticleListItem = styled.li`

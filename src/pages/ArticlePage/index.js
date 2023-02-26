@@ -1,6 +1,7 @@
 import Article from '../../components/Article'
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import styled from 'styled-components';
 
 const ArticlePage = () => {
   const { id } = useParams();
@@ -21,10 +22,36 @@ const ArticlePage = () => {
 
   return (
     <div>
-      <h1>Articles</h1>
+      <ArticleHeader>
+      <BackLink to="/articles">Back</BackLink>
+      <h1>Article</h1>
+      </ArticleHeader>
       <Article articleText={articleText} />
     </div>
   );
 }
 
 export default ArticlePage;
+
+const ArticleHeader = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+
+`;
+
+const BackLink = styled(Link)`
+  color: green;
+  text-decoration: none;
+  padding: 10px;
+  position: absolute;
+  left: 0;
+
+  &:hover {
+    font-weight: 500;
+  }
+
+`;
