@@ -7,6 +7,7 @@ const Article = ({ articleText }) => {
 
   useEffect(() => {
     const [titleText, _summaryText, contentText] = articleText.split('\n\n\n');
+    console.log(_summaryText)
     setTitle(titleText);
     setContent(contentText);
   }, [articleText]);
