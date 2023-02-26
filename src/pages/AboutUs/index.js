@@ -19,8 +19,9 @@ export default About;
 const AboutContainer = styled.div`
   text-align: center;
   padding: 20px;
+  margin: 2rem auto;
+  width: 90%;
   background-color: #f0f0f0;
   border-radius: 10px;
   box-shadow: 0px 5px 5px #ccc;
-
 `;

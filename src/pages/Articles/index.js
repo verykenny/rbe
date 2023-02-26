@@ -1,4 +1,4 @@
-// import Article from '../../components/Article'
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const Articles = () => {
@@ -10,19 +10,43 @@ const Articles = () => {
   ];
 
   return (
-    <div>
+    <ArticlesListContainer>
       <h1>Articles</h1>
-      {/* <Article fileName="/Articles/0001_understandingthefundamentals.txt" /> */}
 
-      <ul>
+      <ArticleList>
         {articles.map(article => (
-          <li key={article.id}>
-            <Link to={`/articles/${article.id}`}>{article.title}</Link>
-          </li>
+          <ArticleListItem key={article.id}>
+            <ArticleLink to={`/articles/${article.id}`}>{article.title}</ArticleLink>
+          </ArticleListItem>
         ))}
-      </ul>
-    </div>
+      </ArticleList>
+    </ArticlesListContainer>
   );
 }
 
 export default Articles;
+
+const ArticlesListContainer = styled.div`
+  margin: 0 auto;
+  width: 90%;
+`;
+
+const ArticleList = styled.ul`
+  list-style: none;
+  margin: 0 auto;
+  width: 50%;
+`;
+
+const ArticleListItem = styled.li`
+  padding: 1rem 0;
+  text-align: left;
+`;
+
+const ArticleLink = styled(Link)`
+  color: #333;
+  text-decoration: none;
+
+  &:hover {
+    font-weight: 500;
+  }
+`;
